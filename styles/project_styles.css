@@ -1,0 +1,499 @@
+html {
+	height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+	margin-left: 0px;
+	background-color: #121212 ;
+	overflow-x: hidden;
+}
+
+.progress-bar {
+	position: relative;
+  height: 8px;
+  background: #007bff;
+  width: 0%;
+}
+
+.background {
+	position: absolute;
+}
+
+.left-top {
+	display: inline-block;
+	height: 90%;
+	width: 19%;
+    border-left: 2.5px solid white;
+    border-bottom: 2.5px solid white;
+    border-color: #272626;
+    border-bottom-left-radius: 50px;
+    margin-left: 75%;
+    transform: rotate(-30deg) translateY(-20%);
+    position: fixed;
+}
+
+.right-button {
+	display: inline-block;
+	height: 18%;
+	width: 35%;
+	border-right: 2.5px solid #fff;
+	border-top: 2.5px solid #fff;
+	border-color: #272626;
+	border-top-right-radius: 50px;
+	transform: rotate(25deg) translateX(-17%);
+	position: fixed;
+	bottom: 3%;
+}
+
+
+.image_icon img{
+	display: inline-flex;
+	border: 1px solid white;
+	border-radius: 100%;
+	width: 60px;
+	height: 60px;
+	margin-top: 2.5%;
+	margin-left: 8%;
+	vertical-align: middle;
+	position: absolute;
+}
+
+/*.image_icon img {
+
+}*/
+
+.header_div {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.icon_name {
+	display: inline-block;
+	position: relative;
+	color: white;
+	font-family:Andale Mono, monospace;
+	margin-top: 3.4%;
+	margin-left: 15%;
+	font-size: 1.5rem;
+	vertical-align: middle;
+	letter-spacing: 3px;
+	position: absolute;
+}
+
+/*.main_header {
+	width: 10%;
+
+}*/
+#menu {
+	display: inline-block;
+	float: right;
+	position: relative;
+	/*margin-right: 2%;
+	margin-top: 2%;*/
+	/*width: 100%;
+	height:100%;*/
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 300px;
+	border-left: 2px solid white;
+	border-bottom: 2px solid white;
+	transition: all .2s ease-in-out;
+}
+
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+.menu-btn__burger {
+  width: 40px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  background-color: #212121;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .2s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .2s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-14px);
+  background-color: #212121;
+}
+.menu-btn__burger::after {
+  transform: translateY(14px);
+  background-color: #212121;
+}
+/* ANIMATION */
+
+
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  background-color: #fff;
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  background-color: #fff;
+}
+
+.menu_list {
+	display: none;
+	float: right;
+	color: #fff;
+	/*text-align: center;*/
+	margin-right: 30%;
+	margin-top: 1%;
+	font-family: "Poppins", Arial, sans-serif;
+}
+
+.menu_list ul li {
+	padding-top: 10%;
+	padding-bottom: 10%;
+	font-size: 270%;
+	border-bottom: 1px solid #fff;
+
+}
+
+.menu_image {
+	display: none;
+	position: relative;
+	float: left;
+	background-color: #fff;
+	width: 30%;
+	height: 100%;
+}
+
+.menu_image img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: .6;
+}
+
+.menu_image p {
+	position: absolute;
+	margin-top: 70%;
+	margin-left: 45%;
+	font-size: 3rem;
+	font-weight: bolder;
+	text-decoration: underline;
+}
+
+.menu_image {
+  height: 100%;
+  width: 0px;
+  opacity: 0;
+  transition: all .75s ease;
+}
+
+.menu_image.show {
+  opacity: 1;
+  height: 100%;
+  width: 30%;
+  transition: all .75s ease;
+}
+
+.cssanimation, .cssanimation span {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+.cssanimation span { display: inline-block }
+
+.fadeInBottom { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(60%);
+    }
+    to { opacity: 1 }
+}
+
+.project_1  {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	margin-top: 10%;
+	margin-left: 10%;
+	overflow: hidden;
+}
+
+.project_1_image {
+	display: inline-block;
+	width: 39%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.project_1_image img {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	height: 75%;
+	margin-top: 25%;
+	overflow: hidden;
+}
+
+.project_1_info {
+	display: inline-block;
+	float: right;
+	width: 50%;
+	height: 100%;
+	margin-left: 10%;
+	overflow: hidden;
+}
+
+.project_1_desc {
+	position: relative;
+	color:#8c8c8c;
+	font-size: 1.1rem;
+	font-weight: normal;
+	font-family: "Poppins", Arial, sans-serif;
+	letter-spacing: 3px;
+	margin-top: 30%;
+	overflow: hidden;
+}
+
+.project_1_heading {
+	position: relative;
+	color: #fff;
+	font-size: 2rem;
+	font-family: "Poppins", Arial, sans-serif;
+	letter-spacing: 1px;
+	overflow: hidden;
+}
+
+.project_1_about {
+	position: relative;
+	width: 80%;
+	color:#6c757d;
+	font-family: "Poppins", Arial, sans-serif;
+	font-size: 20px;
+	overflow: hidden;
+}
+
+
+.project_1_links {
+	position: relative;
+	font-family: "Poppins", Arial, sans-serif;
+	overflow: hidden;
+}
+
+.project_1_icons i {
+	padding: 3%;
+	margin: 2%;
+	background-color: #292929;
+	border-radius: 50%;
+}
+
+.project_1_icons i:hover {
+	transition: color 0.5s ease-in-out;
+    color: #fff;
+}
+
+.project_1_image {
+  height: 100%;
+  width: 0px;
+  opacity: 0;
+  transition: all .75s ease;
+}
+
+
+
+.myself {
+	position: relative;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 10%;
+}
+
+.myself_profile h2 {
+	position: relative;
+	color: #fff;
+	font-family: "Poppins", Arial, sans-serif;
+	letter-spacing: 2px;
+}
+
+.myself_heading h3 {
+	position: relative;
+	color:#fff;
+	font-family: "Poppins", Arial, sans-serif;
+	letter-spacing: 2px;
+}
+
+.myself_information {
+	color:#8c8c8c;
+	font-family: "Poppins", Arial, sans-serif;
+	letter-spacing: 2px;
+}
+
+.myself_education h2{
+	position: relative;
+	color: #fff;
+	font-family: "Poppins", Arial, sans-serif;
+	letter-spacing: 2px;
+}
+
+.myself_skills h2 {
+	position: relative;
+	color: #fff;
+	font-family: "Poppins", Arial, sans-serif;
+	letter-spacing: 2px;
+}
+
+.myself_skills label {
+	display: block;
+	color: #fff;
+	font-size: 20px;
+	font-family: "Poppins", Arial, sans-serif;
+
+}
+
+.progress {
+	height: 8px;
+}
+
+.progress-bar {
+	/*background-color: #8c8c8c;*/
+	border-radius: 30px;
+}
+
+.teams {
+	width: 80%;
+	height: 70%;
+	/*border:2px solid #fff;*/
+	margin-left: 10%;
+	overflow: hidden;
+}
+
+.member {
+	display: inline-block;
+	align-self: center;
+	width: 30%;
+	height: 100%;
+	/*border: 2px solid red;*/
+	overflow: hidden;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.footer_class {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	/*margin-left: 10%;*/
+}
+
+.footer_icons {
+	text-align: center;
+	overflow: hidden;
+}
+
+.footer_icons i {
+	position: relative;
+	color: #007bff;
+	background-color: #292929;
+	padding:20px;
+	border-radius: 50%;
+	margin:1%;
+	margin-top: 20%;
+	overflow: hidden;
+}
+
+.footer_icons i:hover {
+	transition: color 0.5s ease-in-out;
+    color: #fff;
+}
+
+.footer_contact {
+	text-align: center;
+}
+
+.footer_contact_name {
+	position: relative;
+	font-size: 3rem;
+	font-weight: bolder;
+	color: #fff;
+	font-family: "Poppins", Arial, sans-serif;
+	text-align: center;
+}
+
+.footer_contact_email {
+	color: #007bff;
+	font-size: 150%;
+	font-family: "Poppins", Arial, sans-serif;
+}
+
+.signature {
+	position: relative;
+	color: #8c8c8c;
+	font-size: 1rem;
+	text-align: center;
+}
