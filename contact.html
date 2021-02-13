@@ -38,21 +38,39 @@
   			</div>
   			<div class="menu_list">
   				<ul style="list-style: none;">
-  					<a href="index.html" style="text-decoration: none;color: #007bff;"><li class="section-1">Home</li></a>
+  					<a href="index.html" style="text-decoration: none;color: #fff;"><li class="section-1">Home</li></a>
   					<a href="about_me.html" style="text-decoration: none;color: white;"><li class="section-2">About me</li></a>
   					<a href="services.html" style="text-decoration: none;color: white;"><li class="section-3">Services</li></a>
   					<a href="works.html" style="text-decoration: none;color: white;"><li class="section-4">Works</li></a>
-  					<a href="contact.html" style="text-decoration: none;color: white;"><li class="section-5">Contact</li></a>
+  					<a href="contact.html" style="text-decoration: none;color: #007bff;"><li class="section-5">Contact</li></a>
   				</ul>
   			</div>
   			<div class="menu_image">
   				<p class="menu_number"><!-- <strong>01</strong> --></p><img src="./images/main_2_image.jpg" class="menu_img">
   			</div>
 		</div>
+
+		<div class="contact">
+			<div class="contact_info">
+				<p>Contact information</p>
+			</div>
+			<div class="main_details">
+				<div class="address" >
+					<p style="position: absolute;">Address: <span>Guntur, Andhra Pradesh, India</span></p>
+				</div>
+				<div class="mobile_num">
+					<p style="position: absolute;">Mobile: <span>(91+) 938191 38769</span></p> 
+				</div>			
+				<div class="email">
+					<p style="position: absolute;">Email: <span>bonthuavinashchowdary@gmail.com</span></p>
+				</div>
+			</div>
+			
+		</div>
 			
 			<div class="form">
 				<div class="form_div">
-					<form id="contact_form" action="mailer.php" method="post">
+					<form action="https://formspree.io/f/mgepqbyj" method="POST">
 					<div class="form_field">
 			  			<input type="text" id="name" name="name"  placeholder="Your Name" autocomplete="off" required><br>
 					</div>
@@ -69,10 +87,14 @@
 			  			<input type="text" id="message" name="message" placeholder="Message" autocomplete="off" required><br>
 					</div>
 					<div class="form_field">
-			  			<input style="width: 200px;color: #fff; background-color: #242424" type="submit" id="submit" name="submit" value="Send Message"><br>
+			  			<input style="width: 200px;color: #fff; background-color: #242424" type="submit" id="submit" name="submit" placeholder="Send Message"><br>
 					</div>
 				</form>
 
+				</div>
+
+				<div class="map">
+					<div id="googleMap" style="width:100%;height:400px;"></div>
 				</div>
 				
 			</div>			
@@ -98,6 +120,19 @@
 			</div>
 		
 		
+	<script>
+	function myMap() {
+	var mapProp= {
+	  center:new google.maps.LatLng(16.3067,80.4365),
+	  zoom:10,
+	};
+	var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+	}
+	</script>
+
+	  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf9JchSWxNLu3wDNX3Vk1YyyM2qsGcDVk&callback=myMap"></script>
+
+
 	<script type="text/javascript" src='./js/hamburger.js'></script>
 	<script type="text/javascript" src="./js/contact.js"></script>
 </body>
